@@ -1,4 +1,34 @@
 # Neural-Networks
+## AlexNet Architecture (Coming Soon)
+
+Implementation of AlexNet based on the paper "ImageNet Classification with Deep Convolutional Neural Networks." The original architecture that popularized deep learning for computer vision and would go on to inspire other convolutional neural networks such as VGGNet and ResNet.
+
+### Architecture Overview
+
+The network consists of 5 convolutional layers followed by 3 fully connected layers:
+
+- **Layer 1:** 11×11 conv, 96 filters, stride 4 → ReLU → 3×3 max pool, stride 2
+- **Layer 2:** 5×5 conv, 256 filters → ReLU → 3×3 max pool, stride 2
+- **Layer 3:** 3×3 conv, 384 filters → ReLU
+- **Layer 4:** 3×3 conv, 384 filters → ReLU
+- **Layer 5:** 3×3 conv, 256 filters → ReLU → 3×3 max pool, stride 2
+- **Classifier:** Flatten → FC-4096 → ReLU → Dropout(0.5) → FC-4096 → ReLU → Dropout(0.5) → FC-n_classes
+
+### Key Features
+
+- **Large initial kernels:** 11×11 convolution in first layer captures broad patterns
+- **Aggressive downsampling:** Stride of 4 in first layer reduces spatial dimensions quickly
+- **ReLU activation:** First major network to use ReLU instead of tanh/sigmoid, enabling faster training
+- **Dropout regularization:** 0.5 dropout rate in fully connected layers prevents overfitting
+- **Deep architecture:** 8 weight layers (5 conv + 3 FC)
+- **Expects 224×224 RGB input images**
+
+### Parameters
+
+- Input: 224×224×3 RGB images
+- Output: n-classes (configurable)
+- Total parameters: ~62M (varies with number of output classes)
+
 ## VGG-16 Architecture (Configuration D)
 
 Implementation of VGG-16 based on the paper "Very Deep Convolutional Networks for Large-Scale Image Recognition" with batch normalization added for improved training stability.
@@ -30,12 +60,12 @@ The network consists of 13 convolutional layers organized into 5 blocks, followe
 ### Parameters
 
 - Input: 224×224×3 RGB images
-- Output: n_classes (configurable)
+- Output: n-classes (configurable)
 - Total parameters: ~138M (varies with number of output classes)
 
 ## ResNet-18 Architecture
 
-Implementation of the 18-layer Residual Network based on the paper "Deep Residual Learning for Image Recognition". This architecture introduces skip connections (residual connections) that allow training of very deep networks.
+Implementation of the 18-layer Residual Network based on the paper "Deep Residual Learning for Image Recognition." This architecture introduces skip connections (residual connections) that allow training of very deep networks.
 
 ### Architecture Overview
 
@@ -77,7 +107,7 @@ Each BasicBlock contains:
 
 ## Xception Architecture
 
-Implementation of Xception (Extreme Inception) based on the paper "Xception: Deep Learning with Depthwise Separable Convolutions" (https://arxiv.org/pdf/1610.02357). This architecture replaces standard Inception modules with depthwise separable convolutions for improved efficiency.
+Implementation of Xception (Extreme Inception) based on the paper "Xception: Deep Learning with Depthwise Separable Convolutions." This architecture replaces standard Inception modules with depthwise separable convolutions for improved efficiency.
 
 ### Architecture Overview
 
@@ -127,10 +157,10 @@ The network consists of three main flows preceded by an entry stem:
 - Batch normalization after each convolution for training stability
 - ReLU activations throughout (except final layer)
 - Global average pooling eliminates large fully connected layers
-- Expects variable input sizes (typically 299×299 RGB images for ImageNet)
+- Expects 299x299 RGB input images
 
 ### Parameters
 
-- Input: RGB images (typically 299×299, but architecture adapts to different sizes)
-- Output: n_classes (configurable)
+- Input: 299x299x3 RGB images
+- Output: n-classes (configurable)
 - Total parameters: ~23M
