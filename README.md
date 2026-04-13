@@ -164,3 +164,19 @@ The network consists of three main flows preceded by an entry stem:
 - Input: 299x299x3 RGB images
 - Output: n-classes (configurable)
 - Total parameters: ~23M
+
+## Streamlined Architectures (Coming Soon)
+
+## EnsembleNet (See Streamlined Architectures) (Coming Soon)
+
+Combines the classification power of all aforementioned architectures into an ensemble-learning type classifier with an implementation of both hard and soft majority voting.
+
+### Architecture Overview
+- Loads each model
+- Stores the predictions to an array with truth labels stored in a separate array
+- Perform hard or soft majority voting with each model as an ensemble classifier
+
+### Parameters
+
+- Input: 224x224x3 RGB images
+- Output: n-classes (configurable)
