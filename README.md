@@ -1,5 +1,5 @@
 # Neural-Networks
-## AlexNet Architecture (Coming Soon)
+## AlexNet Architecture 
 
 Implementation of AlexNet based on the paper "ImageNet Classification with Deep Convolutional Neural Networks." The original architecture that popularized deep learning for computer vision and would go on to inspire other convolutional neural networks such as VGGNet and ResNet.
 
