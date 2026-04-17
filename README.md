@@ -31,7 +31,7 @@ The network consists of 5 convolutional layers followed by 3 fully connected lay
 
 ## VGG-16 Architecture (Configuration D)
 
-Implementation of VGG-16 based on the paper "Very Deep Convolutional Networks for Large-Scale Image Recognition" with batch normalization added for improved training stability.
+Implementation of VGG-16 based on the paper "Very Deep Convolutional Networks for Large-Scale Image Recognition" **with batch normalization added** (not included in the original) for improved training stability.
 
 ### Architecture Overview
 
