@@ -1,4 +1,9 @@
 # Neural-Networks
+## Training
+All base models were trained using the CIFAR 10 dataset and all finetuned models were trained on a binary toy case glaucoma dataset.
+- **CIFAR 10:** https://www.cs.toronto.edu/~kriz/cifar.html
+- **Glaucoma:** A binary toy case dataset containing X-ray images of eyes, some of patients afflicted with glaucoma, some without
+
 ## AlexNet Architecture 
 
 Implementation of AlexNet based on the paper "ImageNet Classification with Deep Convolutional Neural Networks." The original architecture that popularized deep learning for computer vision and would go on to inspire other convolutional neural networks such as VGGNet and ResNet.
