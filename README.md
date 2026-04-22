@@ -1,6 +1,8 @@
 # Neural-Networks
 ## Training
+
 All base models were trained using the CIFAR-10 dataset and all finetuned models were trained on a binary toy case glaucoma dataset local to the authors.
+
 - **CIFAR-10:** https://www.cs.toronto.edu/~kriz/cifar.html
 - **Glaucoma:** A binary toy case dataset containing X-ray images of eyes, some of patients with glaucoma, some without
 
@@ -172,6 +174,8 @@ The network consists of three main flows preceded by an entry stem:
 
 ## Streamlined Architectures (Coming Soon)
 
+Recommended for deployment, identical to the base models but have the dataset statistics and models saved in individual files. This ensures that if one changes, the changes will be applied everywhere since the dataset statistics and models are imported from said files.
+
 ## EnsembleNet (See Streamlined Architectures) (Coming Soon)
 
 Combines the classification power of all aforementioned architectures into an ensemble-learning type classifier with an implementation of both hard and soft majority voting.
@@ -179,7 +183,7 @@ Combines the classification power of all aforementioned architectures into an en
 ### Architecture Overview
 - Loads each model
 - Stores the predictions to an array with truth labels stored in a separate array
-- Perform hard or soft majority voting with each model as an ensemble classifier
+- Perform hard or soft majority voting with each model's predictions as an ensemble classifier
 
 ### Parameters
 
