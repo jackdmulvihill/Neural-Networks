@@ -1,8 +1,8 @@
 # Neural-Networks
 ## Training
-All base models were trained using the CIFAR 10 dataset and all finetuned models were trained on a binary toy case glaucoma dataset.
-- **CIFAR 10:** https://www.cs.toronto.edu/~kriz/cifar.html
-- **Glaucoma:** A binary toy case dataset containing X-ray images of eyes, some of patients afflicted with glaucoma, some without
+All base models were trained using the CIFAR-10 dataset and all finetuned models were trained on a binary toy case glaucoma dataset.
+- **CIFAR-10:** https://www.cs.toronto.edu/~kriz/cifar.html
+- **Glaucoma:** A binary toy case dataset containing X-ray images of eyes, some of patients with glaucoma, some without
 
 ## AlexNet Architecture 
 
