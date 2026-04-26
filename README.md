@@ -172,11 +172,11 @@ The network consists of three main flows preceded by an entry stem:
 - Output: n-classes (configurable)
 - Total parameters: ~23M
 
-## Streamlined Architectures (Coming Soon)
+## Streamlined Architectures
 
 Recommended for deployment, identical to the base models but have the dataset statistics and models saved in individual files. This ensures that if one changes, the changes will be applied everywhere since the dataset statistics and models are imported from said files.
 
-## EnsembleNet (See Streamlined Architectures) (Coming Soon)
+## EnsembleNet (See Streamlined Architectures) 
 
 Combines the classification power of all aforementioned architectures into an ensemble-learning type classifier with an implementation of both hard and soft majority voting.
 
